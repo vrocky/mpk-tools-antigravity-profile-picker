@@ -18,7 +18,7 @@ public static class AntigravitySettingsService
             {
                 return new AppSettings
                 {
-                    ProfileDirectories = new List<string> { @"C:\AntiGravityProfiles" },
+                    ProfileDirectories = new List<string> { @"C:\profiles_store\AntiGravityProfiles" },
                     VsCodeExePath = $@"{Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData)}\Programs\AntiGravity\AntiGravity.exe"
                 };
             }
@@ -30,7 +30,7 @@ public static class AntigravitySettingsService
 
             if (directories.Count == 0)
             {
-                directories.Add(@"C:\AntiGravityProfiles");
+                directories.Add(@"C:\profiles_store\AntiGravityProfiles");
             }
 
             var antigravityExePath = key.GetValue(AntigravityExePathValue) as string;
@@ -46,7 +46,7 @@ public static class AntigravitySettingsService
         {
             return new AppSettings
             {
-                ProfileDirectories = new List<string> { @"C:\AntiGravityProfiles" },
+                ProfileDirectories = new List<string> { @"C:\profiles_store\AntiGravityProfiles" },
                 VsCodeExePath = $@"{Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData)}\Programs\AntiGravity\AntiGravity.exe"
             };
         }
